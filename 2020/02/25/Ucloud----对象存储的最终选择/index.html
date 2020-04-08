@@ -20,14 +20,14 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"flea-jin.github.io","root":"/FLea_.github.io/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"flea-jin.github.io","root":"/FLea_.github.io/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
   </script>
 
   <meta name="description" content="引言域名申请之后的第三个星期，阿里云终于通过了我的域名审核。鉴于此前dmca服务器架设在国外，本地阅览我博客里面的音乐视频效果都不是太好。加上picgo图床存放下的图片集杂乱无章，不好整理归档。因此我想寻找一个真正能够存放托管我博客大小文件的空间。此篇记录了我解决此问题的简要经历。 picgo博客中的文件，其实就是以图片视频音频这三类为主。在最开始的时候，为了简化操作，我将所有的文件都放在了项目根">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ucloud----对象存储的最终选择">
-<meta property="og:url" content="https://flea-jin.github.io/FLea_.github.io/posts/64617.html">
-<meta property="og:site_name" content="">
+<meta property="og:url" content="https://flea-jin.github.io/FLea_.github.io/2020/02/25/Ucloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9/index.html">
+<meta property="og:site_name" content="FLea_jinの博客">
 <meta property="og:description" content="引言域名申请之后的第三个星期，阿里云终于通过了我的域名审核。鉴于此前dmca服务器架设在国外，本地阅览我博客里面的音乐视频效果都不是太好。加上picgo图床存放下的图片集杂乱无章，不好整理归档。因此我想寻找一个真正能够存放托管我博客大小文件的空间。此篇记录了我解决此问题的简要经历。 picgo博客中的文件，其实就是以图片视频音频这三类为主。在最开始的时候，为了简化操作，我将所有的文件都放在了项目根">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F1.png">
@@ -39,14 +39,14 @@
 <meta property="og:image" content="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F7.png">
 <meta property="article:published_time" content="2020-02-25T08:21:30.000Z">
 <meta property="article:modified_time" content="2020-02-26T15:54:24.000Z">
-<meta property="article:author" content="ray">
+<meta property="article:author" content="FLea_jin">
 <meta property="article:tag" content="Ucloud">
 <meta property="article:tag" content="picgo">
 <meta property="article:tag" content="七牛">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://ray34.cn-sh2.ufileos.com/%E5%8D%9A%E6%96%87%2FUcloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9%2F1.png">
 
-<link rel="canonical" href="https://flea-jin.github.io/FLea_.github.io/posts/64617.html">
+<link rel="canonical" href="https://flea-jin.github.io/FLea_.github.io/2020/02/25/Ucloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9/">
 
 
 <script id="page-configurations">
@@ -59,7 +59,7 @@
   };
 </script>
 
-  <title>Ucloud----对象存储的最终选择 | </title>
+  <title>Ucloud----对象存储的最终选择 | FLea_jinの博客</title>
   
 
 
@@ -110,10 +110,10 @@
 
     <a href="/FLea_.github.io/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title"></h1>
+      <h1 class="site-title">FLea_jinの博客</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">时间之间</p>
+      <p class="site-subtitle" itemprop="description">信息安全攻城狮</p>
   </div>
 
   <div class="site-nav-right">
@@ -208,16 +208,16 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://flea-jin.github.io/FLea_.github.io/posts/64617.html">
+    <link itemprop="mainEntityOfPage" href="https://flea-jin.github.io/FLea_.github.io/2020/02/25/Ucloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/FLea_.github.io/images/avatar.jpg">
-      <meta itemprop="name" content="ray">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="FLea_jin">
+      <meta itemprop="description" content="得过且过却想着过的不错，了色卑微却依旧反复横跳">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="">
+      <meta itemprop="name" content="FLea_jinの博客">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -309,7 +309,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://flea-jin.github.io/FLea_.github.io/posts/64617.html" title="Ucloud----对象存储的最终选择">https://flea-jin.github.io/FLea_.github.io/posts/64617.html</a>
+    <a href="https://flea-jin.github.io/FLea_.github.io/2020/02/25/Ucloud----%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E7%9A%84%E6%9C%80%E7%BB%88%E9%80%89%E6%8B%A9/" title="Ucloud----对象存储的最终选择">https://flea-jin.github.io/FLea_.github.io/2020/02/25/Ucloud----对象存储的最终选择/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -332,7 +332,7 @@
     <div class="post-nav">
       <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/FLea_.github.io/posts/22328.html" rel="next" title="如何订阅我的博客（不要脸">
+    <a href="/FLea_.github.io/2020/02/25/%E5%A6%82%E4%BD%95%E8%AE%A2%E9%98%85%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%8D%E8%A6%81%E8%84%B8/" rel="next" title="如何订阅我的博客（不要脸">
       如何订阅我的博客（不要脸 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -399,10 +399,10 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="ray"
+    <img class="site-author-image" itemprop="image" alt="FLea_jin"
       src="/FLea_.github.io/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">ray</p>
-  <div class="site-description" itemprop="description"></div>
+  <p class="site-author-name" itemprop="name">FLea_jin</p>
+  <div class="site-description" itemprop="description">得过且过却想着过的不错，了色卑微却依旧反复横跳</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -466,7 +466,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">ray</span>
+  <span class="author" itemprop="copyrightHolder">FLea_jin</span>
 </div>
 
         
