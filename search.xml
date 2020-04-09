@@ -8,7 +8,7 @@
       <link href="/posts/undefined.html"/>
       <url>/posts/undefined.html</url>
       
-        <content type="html"><![CDATA[<h3 id="说在开头的话"><a href="#说在开头的话" class="headerlink" title="说在开头的话"></a>说在开头的话</h3><p>上一章都是虾扯淡，这一章开始上真格的了，当然我会尽量把生涩难懂的知识讲的简单有趣的</p><h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><p>不说别的，这是程序猿的信仰，咱们从它开始</p><pre><code class="bash">$ #include&lt;stdio.h&gt;  int main()  {  printf(&quot;Hello World&quot;);  return 0;  }</code></pre>]]></content>
+        <content type="html"><![CDATA[<h3 id="说在开头的话"><a href="#说在开头的话" class="headerlink" title="说在开头的话"></a>说在开头的话</h3><p>上一章都是虾扯淡，这一章开始上真格的了，当然我会尽量把生涩难懂的知识讲的简单有趣的</p><h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><p>不说别的，这是程序猿的信仰，咱们从它开始</p><pre><code class="bash">$ #include&lt;stdio.h&gt;  int main()  {   printf(&quot;Hello World&quot;);   return 0;  }</code></pre>]]></content>
       
       
       <categories>
