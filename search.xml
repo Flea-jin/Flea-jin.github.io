@@ -8,7 +8,7 @@
       <link href="/posts/undefined.html"/>
       <url>/posts/undefined.html</url>
       
-        <content type="html"><![CDATA[<a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<h3 id="1-C语言的特点"><a href="#1-C语言的特点" class="headerlink" title="1.C语言的特点"></a>1.C语言的特点</h3><p>a.设计特性（意思是写的程序更容易让人理解😓更可靠）<br>b.高效性（这玩意是真快，仅次于汇编语言，所以c学的好的非神即渣，后台什么的还是要用c写）<br>c.可移植性（简单说不需要任何修改就可以把mac系统的代码搬到win上去（打个比方）这也是c能编写后台的原因）<br>d.强大而灵活（成也指针败也指针，不说了，说多了都是泪呀）<br>e.面向程序猿（给了程序猿极大的权利，达到真正的管理员，而不是像win一样😥）<br>d.缺点（成也指针败也指针）</p><a id="more"></a><h3 id="2-C语言应用范围"><a href="#2-C语言应用范围" class="headerlink" title="2.C语言应用范围"></a>2.C语言应用范围</h3><p>比如嵌入式系统编程吧，c语言的特点就是稳快准，需要这三方面的c语言都能写</p><h3 id="3-C精神"><a href="#3-C精神" class="headerlink" title="3.C精神"></a>3.C精神</h3><p>这几点比较有意思，我也写出来</p><p>信任程序猿<br>不要妨碍程序猿需要做的事<br>保持语言的精炼和简单<br>只提供一种方法执行一项操作<br>让程序运行更快，即使不能保证其可移植性<br>（🐶我翻译一下，大概就是说，你不懂的话很容易把自己玩脱，但c语言不提醒你，只是静静的看着你个了色在那里排bug）</p><h3 id="4"><a href="#4" class="headerlink" title="4"></a>4</h3>]]></content>
       
       
       <categories>
