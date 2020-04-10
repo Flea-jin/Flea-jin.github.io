@@ -23,15 +23,15 @@
     var CONFIG = {"hostname":"flea-jin.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="说在开头的话上一章都是虾扯淡，这一章开始上真格的了，当然我会尽量把生涩难懂的知识讲的简单有趣的 Hello World不说别的，这是程序猿的信仰，咱们从它开始 $ #include&lt;stdio.h&gt;   int main()   {      printf(&quot;Hello World&quot;);      return 0;   }">
+  <meta name="description" content="1.C语言的特点a.设计特性（意思是写的程序更容易让人理解😓更可靠）b.高效性（这玩意是真快，仅次于汇编语言，所以c学的好的非神即渣，后台什么的还是要用c写）c.可移植性（简单说不需要任何修改就可以把mac系统的代码搬到win上去（打个比方）这也是c能编写后台的原因）d.强大而灵活（成也指针败也指针，不说了，说多了都是泪呀）e.面向程序猿（给了程序猿极大的权利，达到真正的管理员，而不是像win一">
 <meta property="og:type" content="article">
-<meta property="og:title" content="c primer plus-2">
+<meta property="og:title" content="c primer plus-1">
 <meta property="og:url" content="https://flea-jin.github.io/posts/undefined.html">
 <meta property="og:site_name" content="FLea_jinの博客">
-<meta property="og:description" content="说在开头的话上一章都是虾扯淡，这一章开始上真格的了，当然我会尽量把生涩难懂的知识讲的简单有趣的 Hello World不说别的，这是程序猿的信仰，咱们从它开始 $ #include&lt;stdio.h&gt;   int main()   {      printf(&quot;Hello World&quot;);      return 0;   }">
+<meta property="og:description" content="1.C语言的特点a.设计特性（意思是写的程序更容易让人理解😓更可靠）b.高效性（这玩意是真快，仅次于汇编语言，所以c学的好的非神即渣，后台什么的还是要用c写）c.可移植性（简单说不需要任何修改就可以把mac系统的代码搬到win上去（打个比方）这也是c能编写后台的原因）d.强大而灵活（成也指针败也指针，不说了，说多了都是泪呀）e.面向程序猿（给了程序猿极大的权利，达到真正的管理员，而不是像win一">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-09T18:18:08.000Z">
-<meta property="article:modified_time" content="2020-04-09T18:30:14.920Z">
+<meta property="article:published_time" content="2020-04-09T18:35:36.000Z">
+<meta property="article:modified_time" content="2020-04-09T18:39:28.316Z">
 <meta property="article:author" content="FLea_jin">
 <meta property="article:tag" content="C">
 <meta property="article:tag" content="编程">
@@ -50,7 +50,7 @@
   };
 </script>
 
-  <title>c primer plus-2 | FLea_jinの博客</title>
+  <title>c primer plus-1 | FLea_jinの博客</title>
   
 
 
@@ -212,7 +212,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          c primer plus-2
+          c primer plus-1
         </h1>
 
         <div class="post-meta">
@@ -223,7 +223,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-04-10 02:18:08 / 修改时间：02:30:14" itemprop="dateCreated datePublished" datetime="2020-04-10T02:18:08+08:00">2020-04-10</time>
+              <time title="创建时间：2020-04-10 02:35:36 / 修改时间：02:39:28" itemprop="dateCreated datePublished" datetime="2020-04-10T02:35:36+08:00">2020-04-10</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -250,30 +250,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="说在开头的话"><a href="#说在开头的话" class="headerlink" title="说在开头的话"></a>说在开头的话</h3><p>上一章都是虾扯淡，这一章开始上真格的了，当然我会尽量把生涩难懂的知识讲的简单有趣的</p>
-<h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><p>不说别的，这是程序猿的信仰，咱们从它开始</p>
-<pre><code class="bash">$ #include&lt;stdio.h&gt;
-  int main()
-  {
-     printf(&quot;Hello World&quot;);
-     return 0;
-  }</code></pre>
+        <h3 id="1-C语言的特点"><a href="#1-C语言的特点" class="headerlink" title="1.C语言的特点"></a>1.C语言的特点</h3><p>a.设计特性（意思是写的程序更容易让人理解😓更可靠）<br>b.高效性（这玩意是真快，仅次于汇编语言，所以c学的好的非神即渣，后台什么的还是要用c写）<br>c.可移植性（简单说不需要任何修改就可以把mac系统的代码搬到win上去（打个比方）这也是c能编写后台的原因）<br>d.强大而灵活（成也指针败也指针，不说了，说多了都是泪呀）<br>e.面向程序猿（给了程序猿极大的权利，达到真正的管理员，而不是像win一样😥）<br>d.缺点（成也指针败也指针）</p>
 <a id="more"></a>
 
-<p>咱们从头开始</p>
-<p>首先当然是 #includ&lt;stdio.h&gt; 了这个到底是什么意思呢？且听我细细道来：<br>假如你有个哆啦A梦的异次元口袋（想的美），这个口号的尽头是好多仓库A、B、C、D···，假如你这次想用A仓库里的道具，你需要先告诉它呀，你给它说：“嗨宝贝，能把你的异次元通道通往A仓库吗？”口袋很听话把通道通往A。然后你就可以随意从A里挑选好玩的东西了，来吧，给我一个使命必达盒子。。。</p>
-<p>这个#include叫预处理命令，也就是你的计算机最开始会先处理这条命令，而后面的stdio.h相当于A仓库，而这句话的意思就是，计算机会先开始读这行代码，读完后，它会把已经寄存到内存里的stdio.h（头文件）这里面的东西（函数）都搬来，到时候你需要里面的什么东西（函数）都可以直接调用，然后你下面若是出现c语言的标准函数时（printf、scanf···），这个程序就可以运行了。</p>
-<p>假如若没有这句话，你的异次元口袋搞不懂你想要什么，当然也就无法运行了。</p>
-<p>（在普及一点课外知识，计算机这个学科里有这么一句话：避免重复造轮子。也可以说成：站在巨人的肩膀上。意思就是要善于使用前人以经建立好多，因为它已经经过了时间的考验，和众多前辈的考验，比方说c语言的这些函数，等你学习了指针之后，你也可以随意创造函数，但这些你自己创造的函数是经不过时间的考验的，不一定什么时候就会出现bug，然后你的程序就会崩溃，下一个崩溃的就是你了，在举个🌰吧，Adobe全家桶，假如今年2019年，你会用什么版本的呢？大部分外行人会选择本年头的也就是2019年的，而真正有经验的大虾则是会选择2017甚至2016版本的，因为这些老版本的兼容性好，很少会出现bug问题，而那些新版本的就不行了，你知道最痛苦的是什么吗？大半夜加班做的素材或设计的图案因为兼容性问题奔溃了。。。什么？你问为啥不说2020版的？2020版的ps搭载了机械学习，什么真一件抠图什么，嗯。。真香，妈妈再也不用担心我的学习了）</p>
-<p>扯了半天别的，我们现在来说说int main（）这是什么吧</p>
-<p>这个在书中给了一个很忽冷的介绍：就目前而言只需记住这是c程序的基本模块。也就是目前的话，你要写一个c的程序就要先写这个。当然我怎么可以告诉你个这个就结束了呢。我从网上找到了个比较不错的解释：“在C语言当中，一个程序，无论复杂或简单，总体上都是一个“函数”；这个函数就称为“main() 函数”，也就是“主函数”。比如有个“做菜”程序，那么“做菜”这个过程就是“主函数”。在主函数中，根据情况，你可能还需要调用“买菜，切菜，炒菜”等子函数。”</p>
-<p>那么你会问int 是干嘛的呢？我这里先告诉你这是一个定义整形变量的数据类型，也许你有些懵了，我在解释一下看到程序后面有个return 0 了吗？这表示最后这个程序最后会以0作为结尾，而0又是一个整数，还记得int是整形变量的数据类型吗？这形成了一个循环。（多哲学呀，缘起即缘终，最开始就已经注定的结尾,各位请把哲学打在公屏上）<br>包含这个几个部分的才叫一个完整的程序</p>
-<pre><code class="bash">int main()
-{
-
-    return 0;
-}</code></pre>
-
+<h3 id="2-C语言应用范围"><a href="#2-C语言应用范围" class="headerlink" title="2.C语言应用范围"></a>2.C语言应用范围</h3><p>比如嵌入式系统编程吧，c语言的特点就是稳快准，需要这三方面的c语言都能写</p>
+<h3 id="3-C精神"><a href="#3-C精神" class="headerlink" title="3.C精神"></a>3.C精神</h3><p>这几点比较有意思，我也写出来</p>
+<p>信任程序猿<br>不要妨碍程序猿需要做的事<br>保持语言的精炼和简单<br>只提供一种方法执行一项操作<br>让程序运行更快，即使不能保证其可移植性<br>（🐶我翻译一下，大概就是说，你不懂的话很容易把自己玩脱，但c语言不提醒你，只是静静的看着你个了色在那里排bug）</p>
+<h3 id="4-使用C语言的7个步骤（冥冥中自有七意）"><a href="#4-使用C语言的7个步骤（冥冥中自有七意）" class="headerlink" title="4.使用C语言的7个步骤（冥冥中自有七意）"></a>4.使用C语言的7个步骤（冥冥中自有七意）</h3><p>1.定义程序的目标（也就是你编这个程序想要干什么，一般都是做题，因为你要知道写程序和真正的用c写项目还差的很远也就一九开吧，本人渣渣，大佬轻喷。。。手动滑稽）<br>2.设计程序（假如每写一个程序你都先画一个逻辑图的话，我相信用不了多久你的编程水平和逻辑水平将有质一般的飞跃，当然。。。就当我没说）<br>3.写代码（用你的电脑去敲，相信我，c语言的水平绝对取决于你的代码数量，而学习c的最好方法就是敲代码）<br>4.编译（交给你的编译器去做吧，简答来说就是把英文翻译成中文你才能理解我的意思。。English大佬当我没说）<br>5.运行程序（这一步没什么好说的）<br>6.测试和调试程序（这一步很重要，就是把bug排掉，没有人敢说自己一遍码的代码里没有一个bug，所以养成一套自己的找bug的方法和套路很重要，这也是代码数量决定你c语言水平的原因之一）<br>7.维护和修改（这就涉及到算法将代码简化或者结构的修改了，算法是个好东西，它可以大大简化你的代码量，以后打算单独写一栏算法的）</p>
+<h3 id="5-balabala"><a href="#5-balabala" class="headerlink" title="5.balabala"></a>5.balabala</h3><p>然后感觉就没什么好说的了这差不多就是第一章的内容了，c primer plus是本很nb的书了，我曾看过逼乎大神说大一参加蓝桥杯，刷了两三个月这本书，拿了个a组第一，当然这和我这样的渣渣也没什么关系😂。还有这本书适合有一定c语言基础的人去学习。0基础的请好好去听课或者b站的小甲鱼好吧。当然我写的博客肯定也会有很多错误，我也就是个菜🐔，各路大神如果发现的话，可以联系我改正，咱们共同学习，emm。。大概就是这么多了那么</p>
+<h3 id="本文完"><a href="#本文完" class="headerlink" title="本文完"></a>本文完</h3>
     </div>
 
     
@@ -288,7 +273,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://flea-jin.github.io/posts/undefined.html" title="c primer plus-2">https://flea-jin.github.io/posts/undefined.html</a>
+    <a href="https://flea-jin.github.io/posts/undefined.html" title="c primer plus-1">https://flea-jin.github.io/posts/undefined.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -309,12 +294,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/posts/16107.html" rel="prev" title="Hello World">
-      <i class="fa fa-chevron-left"></i> Hello World
+    <a href="/posts/2.html" rel="prev" title="c primer plus-2">
+      <i class="fa fa-chevron-left"></i> c primer plus-2
     </a></div>
       <div class="post-nav-item">
-    <a href="/posts/undefined.html" rel="next" title="c primer plus-1">
-      c primer plus-1 <i class="fa fa-chevron-right"></i>
+    <a href="/posts/undefined.html" rel="next" title="实验">
+      实验 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -374,7 +359,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#说在开头的话"><span class="nav-number">1.</span> <span class="nav-text">说在开头的话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hello-World"><span class="nav-number">2.</span> <span class="nav-text">Hello World</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-C语言的特点"><span class="nav-number">1.</span> <span class="nav-text">1.C语言的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-C语言应用范围"><span class="nav-number">2.</span> <span class="nav-text">2.C语言应用范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-C精神"><span class="nav-number">3.</span> <span class="nav-text">3.C精神</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-使用C语言的7个步骤（冥冥中自有七意）"><span class="nav-number">4.</span> <span class="nav-text">4.使用C语言的7个步骤（冥冥中自有七意）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-balabala"><span class="nav-number">5.</span> <span class="nav-text">5.balabala</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本文完"><span class="nav-number">6.</span> <span class="nav-text">本文完</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
