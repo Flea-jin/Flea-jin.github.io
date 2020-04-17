@@ -23,15 +23,15 @@
     var CONFIG = {"hostname":"flea-jin.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="说在开头的话上一章都是虾扯淡，这一章开始上真格的了，当然我会尽量把生涩难懂的知识讲的简单有趣的 Hello World不说别的，这是程序猿的信仰，咱们从它开始 $ #include&lt;stdio.h&gt;   int main()   {      int num;      num&#x3D;0;      printf(&quot;Hello World&quot;); &#x2F;&#x2F;打印 Hello Wo">
+  <meta name="description" content="说在开头的话上一章都是虾扯淡，这一章开始上真格的了，当然我会尽量把生涩难懂的知识讲的简单有趣的 Hello World不说别的，这是程序猿的信仰，咱们从它开始 $ #include&lt;stdio.h&gt;   int main()   {      int num;      num&#x3D;0;      printf(&quot;Hello World\n&quot;); &#x2F;&#x2F;打印 Hello">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c primer plus-2">
 <meta property="og:url" content="https://flea-jin.github.io/posts/2.html">
 <meta property="og:site_name" content="FLea_jinの博客">
-<meta property="og:description" content="说在开头的话上一章都是虾扯淡，这一章开始上真格的了，当然我会尽量把生涩难懂的知识讲的简单有趣的 Hello World不说别的，这是程序猿的信仰，咱们从它开始 $ #include&lt;stdio.h&gt;   int main()   {      int num;      num&#x3D;0;      printf(&quot;Hello World&quot;); &#x2F;&#x2F;打印 Hello Wo">
+<meta property="og:description" content="说在开头的话上一章都是虾扯淡，这一章开始上真格的了，当然我会尽量把生涩难懂的知识讲的简单有趣的 Hello World不说别的，这是程序猿的信仰，咱们从它开始 $ #include&lt;stdio.h&gt;   int main()   {      int num;      num&#x3D;0;      printf(&quot;Hello World\n&quot;); &#x2F;&#x2F;打印 Hello">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-04-09T18:18:08.000Z">
-<meta property="article:modified_time" content="2020-04-10T18:00:37.972Z">
+<meta property="article:modified_time" content="2020-04-17T05:36:54.048Z">
 <meta property="article:author" content="FLea_jin">
 <meta property="article:tag" content="C">
 <meta property="article:tag" content="编程">
@@ -229,7 +229,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-11 02:00:37" itemprop="dateModified" datetime="2020-04-11T02:00:37+08:00">2020-04-11</time>
+                <time title="修改时间：2020-04-17 13:36:54" itemprop="dateModified" datetime="2020-04-17T13:36:54+08:00">2020-04-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -263,7 +263,7 @@
   {
      int num;
      num=0;
-     printf(&quot;Hello World&quot;); //打印 Hello World
+     printf(&quot;Hello World\n&quot;); //打印 Hello World
      return 0;
   }</code></pre>
 <a id="more"></a>
@@ -331,6 +331,40 @@ b=a;</code></pre>
 <p>你是否感觉到有一丝丝清楚了呢？</p>
 <p>这个小胖子就相当于num的一个属性，咱们在用数学的角度去理解一下，当这个int 在 num 前面时就相当于告诉计算机说，num是一个整数，你给我记好了（int是整数型的数据类型），然后后面出现的num就只能是整数（先这么理解，后面可以推翻），咱们在看看num1，他前面的float是什么呢？上面说了计算机需要用两种方式来表示整数和小数，刚才我讲了int是表示整数的，现在我告诉你这个float其实表示的是小数，也就是计算机你给我听好了，下面的num1只能是小数欧。当然还有double（表示更精细的小数）char（表示字母）···</p>
 <p>现在你是不是更加清晰一些了呢？当然加入你还是无法理解，这不是日子还长吗？你可以在今后的码代码中一遍一遍去体会，当然我总是说码代码，这里我不是说让你自己硬想，去闭门造车，而是要多借鉴，也就是多抄，当你抄的多了或者说见的多了，你会发现自己对编程这件事的理解程度也就加深了。</p>
+<p>6.函数（printf）</p>
+<p>printf函数的具体用法，在这里先不仔细叙述了，这里主要讲一下c语言中函数是个什么东西。</p>
+<p>举个🌰吧，有一天小明经过一个没有岔路的小路叫main（主函数），而小路中间有个买小吃的叫函数，所以小明先走到买小吃的函数哪里买了一点东西，然后才走到小路的尽头。</p>
+<p>也就是说c语言调用函数的方法，当程序运行到函数名这一行时，控制权就被转给已命名的函数那里（例子中是printf）。等函数执行结束之后，控制权又返回至主函数（main（））</p>
+<p>那咱们再来说说printf吧</p>
+<pre><code class="bash">printf(&quot;Hello World\n&quot;);</code></pre>
+<p>这行中使用了c语言的一个标准函数：printf（）（不是printf而是printf（））。圆括号表示printf是一个函数名。圆括号中的内容是从mian（）函数传给printf（）函数的信息（就是把括号中的内容交给printf（）去操作）。而括号中的内容Hello World我们把它称为实际参数（实参）意思是传递给函数特定的值，当然还有一个叫形参（形参）是函数中用于存储值的变量（后面会讲的），当然你会问printf（）会使用实参来做什么？</p>
+<p>该函数会查看双引号中的内容，并将其打印在屏幕上。（当然还有很多用法和限制条件 ）</p>
+<p>那你想想打印在屏幕上的会是什么呢？这时候你肯定会说当然是 Hello World\n 了，不是你说会打印双引号中的内容吗？对，确实是要打印双引号里的内容，但是这里面就有涉及到了一个新的概念，这个“\n”到底是干什么的，且听我细细为你道来。</p>
+<p>咱们还是先看个🌰</p>
+<pre><code class="bash">printf(&quot;I am a simple&quot;);
+printf(&quot;computer.\n&quot;);
+printf(&quot;My favourite number is num bescause it is first.\n&quot;);</code></pre>
+<p>你猜猜他会打印几行？</p>
+<p>我来告诉你，这个最终被打印的结果是</p>
+<pre><code class="bash">I am a simplecomputer.
+My favourite number is num bescause it is first.</code></pre>
+<p>这时候聪明的你是不是大概已经猜到这个奇妙的\n的用法了呢？</p>
+<p>对这个\n的意思就是换行。它代表一个换行符，简单来说就是当你打字的时候想从下一行开始就敲一下回车，而在printf中就是在下一行的最左边开始新的一行。</p>
+<p>这时候也许你的小脑瓜中会充满许多问号，那为什么不直接从键盘上按下enter键呢？</p>
+<p>因为如果你要这样做的话，你的编译器可能认为这是直接的命令（也就是你会发现你写的代码直接换行了），而不是存储在源代码用的指令。</p>
+<p>当然printf怎么会这么简单呢？还有许多占位符···之类的没有讲，这就是之后的事了</p>
+<p>7 ；<br>也许聪明的你早已注意到了为什么很多语句后面都有；这个东西呢？</p>
+<p>咱们在看一下一个简单的c程序的格式</p>
+<pre><code class="bash">#include&lt;stdio.h&gt;
+int mian（）
+{
+
+  语句
+  return 0;
+
+}</code></pre>
+<p>一个简单的c语言大概就是这样的了，看到里面语句的那部分了吗？在c语言中大部分的语句都以分号结尾的，这相当于一个终止字符，大概的意识是告诉编译器，你看好了，这句话我说完了。当然等学到后面你会发现有些函数他的后面是不用加；的，而不用加；的原因也是因为这类函数后面多半带了括号，也就相当于告诉编译器，你看好了，这个范围内的语句都是我的，你别搞混了。所以我这里说，大部分语句都是以分号结尾的。</p>
+<h3 id="写在结尾的话"><a href="#写在结尾的话" class="headerlink" title="写在结尾的话"></a>写在结尾的话</h3><p>这章的大部分内容差不多已经讲了，还有点剩下的我会下载2p的，也许聪明你会感觉我写的很散，进度很慢，当然我也感觉有点啰嗦了，但慢工出细活，在学校里老师可不会和你扯这么多，进度刷刷的往前赶，你要知道这不是学校老师不行，而是你们的需求不一样，老师注重的的是进度，效率和分数，而你不一样，你将来是要靠这个吃饭的，所以掌握的扎不扎实，也就是你的技术硬不硬，也就是你饭碗大不大的因素了。</p>
 
     </div>
 
@@ -432,7 +466,7 @@ b=a;</code></pre>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#说在开头的话"><span class="nav-number">1.</span> <span class="nav-text">说在开头的话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hello-World"><span class="nav-number">2.</span> <span class="nav-text">Hello World</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#说在开头的话"><span class="nav-number">1.</span> <span class="nav-text">说在开头的话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hello-World"><span class="nav-number">2.</span> <span class="nav-text">Hello World</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写在结尾的话"><span class="nav-number">3.</span> <span class="nav-text">写在结尾的话</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
